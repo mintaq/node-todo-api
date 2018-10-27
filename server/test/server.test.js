@@ -107,7 +107,7 @@ describe('GET /todos/:id', () => {
 			.get('/todos/222zzz')
 			.expect(404)
 			.end(done);
-	});	
+	});
 });
 
 describe('DELETE /todos/:id', () => {
@@ -153,7 +153,7 @@ describe('PATCH /todos/:id', () => {
 	it('should update the todo', (done) => {
 		var hexID = todos[0]._id.toHexString();
 		var text = 'New text';
-		
+
 		request(app)
 			.patch(`/todos/${hexID}`)
 			.send({
@@ -170,9 +170,9 @@ describe('PATCH /todos/:id', () => {
 	});
 
 	it('should clear compeletedAt when todo is not completed', (done) => {
-		var hexID = todos[1]._id.toHexString();
+		var hexID = todos[1]._id.toHexSt ring();
 		var text = 'New text HIHIHI';
-		
+
 		request(app)
 			.patch(`/todos/${hexID}`)
 			.send({
