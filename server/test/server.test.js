@@ -170,7 +170,7 @@ describe('PATCH /todos/:id', () => {
 	});
 
 	it('should clear compeletedAt when todo is not completed', (done) => {
-		var hexID = todos[1]._id.toHexSt ring();
+		var hexID = todos[1]._id.toHexString();
 		var text = 'New text HIHIHI';
 
 		request(app)
